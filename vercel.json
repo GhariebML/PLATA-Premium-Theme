@@ -1,0 +1,21 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/pages/home/index.html" },
+    { "source": "/shop", "destination": "/pages/category/index.html" },
+    { "source": "/categories", "destination": "/pages/category/index.html" },
+    { "source": "/product", "destination": "/pages/product/index.html" },
+    { "source": "/routines", "destination": "/pages/routines/index.html" },
+    { "source": "/cart", "destination": "/pages/cart/index.html" },
+    { "source": "/quiz", "destination": "/pages/quiz/index.html" },
+    { "source": "/account(.*)", "destination": "/pages/404/index.html" },
+    { "source": "/about", "destination": "/pages/404/index.html" },
+    { "source": "/contact", "destination": "/pages/404/index.html" },
+    { "source": "/faq", "destination": "/pages/404/index.html" },
+    { "source": "/assets/(.*)", "destination": "/assets/$1" },
+    { "source": "/components/(.*)", "destination": "/components/$1" },
+    { "source": "/sections/(.*)", "destination": "/sections/$1" },
+    { "source": "/pages/(.*)", "destination": "/pages/$1" },
+    { "source": "/(.*)", "destination": "/pages/404/index.html" }
+  ]
+}
