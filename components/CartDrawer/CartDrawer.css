@@ -1,0 +1,229 @@
+/* ============================
+   COMPONENT: CART DRAWER
+   CartDrawer.css
+   ============================ */
+
+.cart-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 36, 34, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: calc(var(--z-modal) - 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+}
+
+.cart-drawer-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  left: 0; /* Left side for RTL to slide from left edge */
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background-color: var(--color-surface);
+  z-index: var(--z-modal);
+  transform: translateX(-100%); /* Slide from left in RTL */
+  transition: transform var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 0 20px rgba(0,0,0,0.1); /* Shadow on right side */
+}
+
+/* If the site is LTR, it slides from right. In RTL, it should slide from the start (right edge) or end (left edge).
+   Usually in Arabic UI, drawers slide from the left edge (end) because content starts from the right.
+   Let's keep it left edge for RTL. */
+
+.cart-drawer.is-open {
+  transform: translateX(0);
+}
+
+.cart-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cart-drawer-title {
+  font-family: var(--font-arabic);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.cart-drawer-count {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  font-size: var(--text-xs);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.cart-drawer-close {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: var(--space-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-drawer-close:hover {
+  color: var(--color-error);
+}
+
+/* Free Shipping Progress */
+.cart-drawer-progress {
+  padding: var(--space-4) var(--space-6);
+  background-color: var(--color-surface-banner);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.progress-text {
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+  font-weight: var(--weight-medium);
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 6px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--color-primary);
+  width: 75%; /* Dynamic in JS */
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+}
+
+/* Cart Items */
+.cart-drawer-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.cart-item {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-alt);
+  object-fit: cover;
+}
+
+.cart-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item-title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  margin-bottom: var(--space-1);
+}
+
+.cart-item-price {
+  font-size: var(--text-sm);
+  color: var(--color-primary-deeper);
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-3);
+}
+
+.cart-item-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* Small quantity selector specifically for cart */
+.cart-qty {
+  height: 32px;
+}
+.cart-qty .qty-btn {
+  width: 32px;
+  font-size: var(--text-base);
+}
+.cart-qty .qty-input {
+  width: 30px;
+  font-size: var(--text-sm);
+}
+
+.cart-item-remove {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cart-item-remove:hover {
+  color: var(--color-error);
+}
+
+/* Footer Summary */
+.cart-drawer-footer {
+  padding: var(--space-6);
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.03);
+}
+
+.cart-summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.cart-summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px dashed var(--color-border);
+  margin-bottom: var(--space-6);
+}
+
+.cart-drawer-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}

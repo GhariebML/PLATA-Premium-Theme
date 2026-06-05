@@ -1,0 +1,197 @@
+/* ============================
+   COMPONENT: FILTER PANEL & SORT DROPDOWN
+   Filters.css
+   ============================ */
+
+/* Sort Dropdown */
+.sort-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.product-count {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.sort-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.sort-select {
+  font-family: var(--font-arabic);
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M6%209L12%2015L18%209%22%20stroke%3D%22%232C2422%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: left var(--space-2) center; /* RTL */
+  padding-left: var(--space-8); /* Room for icon */
+}
+
+/* Filter Panel (Sidebar on desktop, drawer on mobile) */
+.category-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .category-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.filter-panel {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .filter-panel {
+    width: 280px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 100px; /* Below header */
+  }
+}
+
+.filter-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.filter-title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+}
+
+.filter-clear {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.filter-clear:hover {
+  color: var(--color-error);
+}
+
+/* Filter Group */
+.filter-group {
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-4);
+}
+
+.filter-group-title {
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--space-1);
+  background-color: var(--color-surface);
+  position: relative;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.custom-checkbox input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Product Grid Area */
+.category-products {
+  flex-grow: 1;
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-10);
+}
+
+/* Mobile Filter Drawer Base Styles */
+@media (max-width: 1023px) {
+  .filter-panel {
+    display: none; /* Handled via JS/modal in production */
+  }
+  
+  .filter-panel.is-open {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 85%;
+    max-width: 350px;
+    background: var(--color-surface);
+    z-index: var(--z-modal);
+    padding: var(--space-6);
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,104 @@
+/* ============================
+   PLATA DESIGN TOKENS
+   tokens.css
+   ============================ */
+
+:root {
+  /* ── Colors ── */
+  --color-primary:          #C9A89A;
+  --color-primary-dark:     #B89488;
+  --color-primary-deeper:   #8B6055;
+  --color-secondary:        #D4B5AA;
+
+  --color-bg:               #FCFAF8;
+  --color-surface:          #FFFFFF;
+  --color-surface-alt:      #F9F6F0;
+  --color-surface-banner:   #D4B5AA;
+
+  --color-text-primary:     #2C2422;
+  --color-text-secondary:   #6B5651;
+  --color-text-muted:       #A89590;
+  --color-text-inverse:     #FFFFFF;
+
+  --color-border:           #EAE4DD;
+  --color-border-focus:     #C9A89A;
+
+  --color-success:          #7BAB8B;
+  --color-error:            #C95A5A;
+  --color-warning:          #E8A837;
+  --color-star:             #E8A837;
+
+  /* ── Typography ── */
+  --font-arabic:            'Almarai', sans-serif;
+  --font-brand:             'Cormorant Garamond', serif;
+
+  --text-xs:   11px;
+  --text-sm:   13px;
+  --text-base: 15px;
+  --text-md:   17px;
+  --text-lg:   20px;
+  --text-xl:   24px;
+  --text-2xl:  30px;
+  --text-3xl:  36px;
+  --text-4xl:  48px;
+  --text-5xl:  56px;
+
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+
+  --leading-tight:    1.2;
+  --leading-snug:     1.4;
+  --leading-normal:   1.6;
+  --leading-relaxed:  1.8;
+
+  /* ── Spacing ── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+
+  /* ── Border Radius ── */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* ── Shadows (Premium soft shadows) ── */
+  --shadow-card:   0 4px 24px rgba(44,36,34,0.04);
+  --shadow-hover:  0 12px 48px rgba(44,36,34,0.08);
+  --shadow-modal:  0 24px 80px rgba(44,36,34,0.12);
+  --shadow-sticky: 0 4px 20px rgba(44,36,34,0.06);
+
+  /* ── Transitions (Smoother easing) ── */
+  --transition-fast:   200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:   350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Breakpoints (reference only, use media queries) ── */
+  /* Mobile: < 768px | Tablet: 768–1024px | Desktop: > 1024px */
+
+  /* ── Z-Index Scale ── */
+  --z-base:    1;
+  --z-dropdown: 100;
+  --z-sticky:  200;
+  --z-modal:   300;
+  --z-toast:   400;
+  --z-overlay: 500;
+}
+
+/* -- Custom Scrollbar -- */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--color-surface-alt); }
+::-webkit-scrollbar-thumb { background: var(--color-border-focus); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }

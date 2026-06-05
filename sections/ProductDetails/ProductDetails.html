@@ -1,0 +1,118 @@
+<!-- 
+  SECTION: PRODUCT DETAILS
+  ProductDetails.html
+-->
+
+<section class="product-details-section">
+  <div class="container">
+    <div class="product-details-layout">
+      
+      <!-- Gallery Area -->
+      <div class="product-gallery">
+        <div class="gallery-main">
+          <img src="/assets/images/placeholders/product-1-large.jpg" alt="سيروم PLATA للإشراق" id="mainImage">
+        </div>
+        <div class="gallery-thumbnails">
+          <div class="thumbnail is-active">
+            <img src="/assets/images/placeholders/product-1.jpg" alt="صورة مصغرة 1">
+          </div>
+          <div class="thumbnail">
+            <img src="/assets/images/placeholders/product-1-alt1.jpg" alt="صورة مصغرة 2">
+          </div>
+          <div class="thumbnail">
+            <img src="/assets/images/placeholders/product-1-alt2.jpg" alt="صورة مصغرة 3">
+          </div>
+        </div>
+      </div>
+
+      <!-- Info Area -->
+      <div class="product-info">
+        
+        <div class="product-breadcrumb">
+          <a href="/">الرئيسية</a> / <a href="/category/serums">السيروم</a> / سيروم PLATA للإشراق
+        </div>
+
+        <h1 class="product-title-large">سيروم PLATA للإشراق</h1>
+        
+        <div class="product-meta">
+          <div class="product-rating-large">
+            ★★★★★ <span>4.9</span>
+          </div>
+          <a href="#reviews" class="product-review-link">(قراءة 45 تقييم)</a>
+        </div>
+
+        <div class="product-price-large">145 ر.س</div>
+
+        <p class="product-desc-short">
+          تركيبة خفيفة وسريعة الامتصاص غنية بفيتامين C وحمض الهيالورونيك. 
+          تعمل على توحيد لون البشرة وتقليل التصبغات ومنحك إشراقة طبيعية تدوم طوال اليوم.
+        </p>
+
+        <!-- Actions -->
+        <div class="product-actions">
+          
+          <!-- In Stock View -->
+          <div class="stock-view">
+            <label class="form-label d-block mb-2">الكمية:</label>
+            <div class="quantity-selector mb-4">
+              <button class="qty-btn" aria-label="تقليل">−</button>
+              <input type="number" class="qty-input" value="1" min="1" max="10">
+              <button class="qty-btn" aria-label="زيادة">+</button>
+            </div>
+            
+            <div class="action-buttons">
+              <button class="btn btn-primary btn-lg btn-add-cart">إضافة إلى السلة</button>
+              <button class="btn-wishlist-large" aria-label="أضف للمفضلة">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Out of Stock View (Hidden by default, toggle class 'is-out-of-stock' on parent to show) -->
+          <div class="out-of-stock-view d-none">
+            <span class="oos-badge">غير متوفر حالياً</span>
+            <p class="text-sm text-muted">سجلي بريدك الإلكتروني وسنخبرك فور توفره.</p>
+            <form class="notify-form">
+              <input type="email" class="form-control" placeholder="البريد الإلكتروني" required>
+              <button type="submit" class="btn btn-outline">أخبرني</button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Accordion Info -->
+        <div class="product-accordion">
+          
+          <div class="accordion-item is-open">
+            <button class="accordion-header">
+              المكونات الرئيسية
+              <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li><strong>فيتامين C (10%):</strong> مضاد أكسدة قوي يفتح البشرة.</li>
+                <li><strong>حمض الهيالورونيك:</strong> ترطيب عميق ومكثف.</li>
+                <li><strong>مستخلص الصبار:</strong> يهدئ البشرة ويمنع التهيج.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              طريقة الاستخدام
+              <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+              توضع 3-4 قطرات على بشرة نظيفة وجافة صباحاً ومساءً. يدلك بلطف حتى يُمتص تماماً قبل وضع المرطب.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>سلة المشتريات | بلاتا - PLATA</title>
+  
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/utilities.css">
+  <link rel="stylesheet" href="../../assets/css/animations.css">
+  
+  <link rel="stylesheet" href="../../components/Header/Header.css">
+  <link rel="stylesheet" href="../../components/Footer/Footer.css">
+  <link rel="stylesheet" href="../../components/BottomNavigation/BottomNavigation.css">
+  <link rel="stylesheet" href="../../components/Button/Button.css">
+  <link rel="stylesheet" href="../../components/Input/Input.css">
+  
+  <!-- Reusing drawer classes for consistency where needed, but custom cart layout -->
+  <link rel="stylesheet" href="../../components/CartDrawer/CartDrawer.css">
+  
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body class="cart-page">
+
+  <!-- Header -->
+  <header class="site-header d-none-md d-lg-block">
+    <div class="container">
+      <div class="header-inner">
+        <nav class="desktop-nav">
+          <a href="/" class="nav-link">الرئيسية</a>
+          <a href="/shop" class="nav-link">تسوق</a>
+          <a href="/categories" class="nav-link nav-item-dropdown">التصنيفات</a>
+          <a href="/routines" class="nav-link nav-item-dropdown">العناية بالبشرة</a>
+          <a href="/about" class="nav-link">عن بلاتا</a>
+        </nav>
+        <a href="/" class="header-logo">P L A T A</a>
+        <div class="header-actions">
+          <a href="/account" class="header-action-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a>
+          <a href="/cart" class="header-action-btn is-active"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="header-badge">3</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="cart-main">
+    <div class="container">
+      
+      <div class="cart-layout fade-in">
+        
+        <!-- Cart Items -->
+        <div class="cart-items-section">
+          <h1 class="cart-page-title">سلة المشتريات (3)</h1>
+          
+          <!-- Free Shipping Progress -->
+          <div class="cart-drawer-progress" style="background:none; padding:0; padding-bottom:1.5rem; margin-bottom:1.5rem; border-bottom:1px solid var(--color-border);">
+            <p class="progress-text">باقي لك <strong class="text-primary">55 ر.س</strong> للحصول على شحن مجاني 🚚</p>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 75%;"></div>
+            </div>
+          </div>
+
+          <!-- Item 1 -->
+          <div class="cart-item-row">
+            <div class="cart-item-product">
+              <img src="../../assets/images/placeholders/product-1.jpg" alt="سيروم">
+              <div>
+                <a href="/product" class="cart-item-title d-block text-lg mb-1">سيروم PLATA للإشراق</a>
+                <p class="text-sm text-muted mb-2">الحجم: 30 مل</p>
+                <button class="cart-item-remove">إزالة من السلة</button>
+              </div>
+            </div>
+            <div class="cart-item-controls">
+              <div class="quantity-selector">
+                <button class="qty-btn">−</button>
+                <input type="number" class="qty-input" value="1" min="1">
+                <button class="qty-btn">+</button>
+              </div>
+              <div class="cart-item-total-price">145 ر.س</div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="cart-item-row">
+            <div class="cart-item-product">
+              <img src="../../assets/images/placeholders/product-2.jpg" alt="مرطب">
+              <div>
+                <a href="/product" class="cart-item-title d-block text-lg mb-1">كريم الترطيب العميق</a>
+                <p class="text-sm text-muted mb-2">الحجم: 50 مل</p>
+                <button class="cart-item-remove">إزالة من السلة</button>
+              </div>
+            </div>
+            <div class="cart-item-controls">
+              <div class="quantity-selector">
+                <button class="qty-btn">−</button>
+                <input type="number" class="qty-input" value="2" min="1">
+                <button class="qty-btn">+</button>
+              </div>
+              <div class="cart-item-total-price">240 ر.س</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Order Summary -->
+        <div class="cart-summary-section">
+          <h2 class="cart-summary-title">ملخص الطلب</h2>
+          
+          <form class="promo-code-form">
+            <input type="text" class="form-control" placeholder="كود الخصم">
+            <button type="submit" class="btn btn-outline">تفعيل</button>
+          </form>
+
+          <div class="cart-summary-line">
+            <span>المجموع الفرعي</span>
+            <span>385 ر.س</span>
+          </div>
+          <div class="cart-summary-line">
+            <span>الشحن</span>
+            <span>يتم حسابه في خطوة الدفع</span>
+          </div>
+          
+          <div class="cart-summary-total">
+            <span>المجموع الإجمالي</span>
+            <span>385 ر.س</span>
+          </div>
+
+          <p class="text-xs text-muted text-center mb-4">شامل ضريبة القيمة المضافة</p>
+
+          <a href="/checkout" class="btn btn-primary btn-block btn-lg mb-3">إتمام الطلب بأمان</a>
+          
+          <div class="text-center">
+            <img src="../../assets/images/placeholders/payments.png" alt="طرق الدفع" style="height: 24px; opacity: 0.6;">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">P L A T A</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

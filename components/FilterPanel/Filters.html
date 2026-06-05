@@ -1,0 +1,82 @@
+<!-- 
+  COMPONENT: FILTER PANEL & SORT DROPDOWN
+  Filters.html
+-->
+
+<!-- Sort Header -->
+<div class="sort-header">
+  <div class="product-count">12 منتج</div>
+  <div class="sort-dropdown">
+    <label for="sort" class="sort-label">ترتيب حسب:</label>
+    <select id="sort" class="sort-select">
+      <option value="recommended">المقترح لك</option>
+      <option value="newest">الأحدث</option>
+      <option value="price-asc">السعر: من الأقل للأعلى</option>
+      <option value="price-desc">السعر: من الأعلى للأقل</option>
+    </select>
+  </div>
+</div>
+
+<!-- Layout Wrapper (for Category Page) -->
+<div class="category-layout">
+  
+  <!-- Filter Panel Sidebar -->
+  <aside class="filter-panel" id="filterPanel">
+    <div class="filter-panel-header">
+      <h3 class="filter-title">الفلاتر</h3>
+      <button class="filter-clear">مسح الكل</button>
+    </div>
+
+    <!-- Group 1 -->
+    <div class="filter-group">
+      <div class="filter-group-title">نوع البشرة <span>−</span></div>
+      <div class="filter-options">
+        <label class="custom-checkbox">
+          <input type="checkbox">
+          <span class="checkbox-label">عادية</span>
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" checked>
+          <span class="checkbox-label">جافة</span>
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox">
+          <span class="checkbox-label">دهنية</span>
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox">
+          <span class="checkbox-label">مختلطة</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Group 2 -->
+    <div class="filter-group">
+      <div class="filter-group-title">احتياج البشرة <span>−</span></div>
+      <div class="filter-options">
+        <label class="custom-checkbox">
+          <input type="checkbox">
+          <span class="checkbox-label">ترطيب عميق</span>
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox">
+          <span class="checkbox-label">إشراقة ونضارة</span>
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox">
+          <span class="checkbox-label">مكافحة التجاعيد</span>
+        </label>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Product Grid Area (Placeholder) -->
+  <div class="category-products">
+    <!-- Insert .products-grid here -->
+    <div class="load-more-container">
+      <button class="btn btn-outline btn-lg">عرض المزيد</button>
+    </div>
+  </div>
+
+</div>

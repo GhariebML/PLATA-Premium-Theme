@@ -1,0 +1,96 @@
+<!-- 
+  COMPONENT: CART DRAWER
+  CartDrawer.html
+-->
+
+<!-- Overlay to click-to-close -->
+<div class="cart-drawer-overlay is-open" id="cartOverlay"></div>
+
+<!-- Drawer Panel -->
+<div class="cart-drawer is-open" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+  
+  <div class="cart-drawer-header">
+    <h2 class="cart-drawer-title" id="cartTitle">
+      سلة المشتريات
+      <span class="cart-drawer-count">3</span>
+    </h2>
+    <button class="cart-drawer-close" aria-label="إغلاق السلة">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Progress Bar (Free Shipping) -->
+  <div class="cart-drawer-progress">
+    <p class="progress-text">باقي لك <strong class="text-primary">55 ر.س</strong> للحصول على شحن مجاني 🚚</p>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" style="width: 75%;"></div>
+    </div>
+  </div>
+
+  <!-- Items List -->
+  <div class="cart-drawer-items">
+    
+    <!-- Item 1 -->
+    <div class="cart-item">
+      <img src="/assets/images/placeholders/product-1.jpg" alt="سيروم" class="cart-item-image">
+      <div class="cart-item-info">
+        <a href="/product" class="cart-item-title">سيروم PLATA للإشراق</a>
+        <div class="cart-item-price">145 ر.س</div>
+        
+        <div class="cart-item-actions">
+          <div class="quantity-selector cart-qty">
+            <button class="qty-btn">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="cart-item-remove">حذف</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="cart-item">
+      <img src="/assets/images/placeholders/product-2.jpg" alt="مرطب" class="cart-item-image">
+      <div class="cart-item-info">
+        <a href="/product" class="cart-item-title">كريم الترطيب العميق</a>
+        <div class="cart-item-price">120 ر.س</div>
+        
+        <div class="cart-item-actions">
+          <div class="quantity-selector cart-qty">
+            <button class="qty-btn">−</button>
+            <input type="number" class="qty-input" value="2" min="1">
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="cart-item-remove">حذف</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Summary -->
+  <div class="cart-drawer-footer">
+    <div class="cart-summary-line">
+      <span>المجموع الفرعي</span>
+      <span>385 ر.س</span>
+    </div>
+    <div class="cart-summary-line">
+      <span>الشحن</span>
+      <span>يتم حسابه في الدفع</span>
+    </div>
+    
+    <div class="cart-summary-total">
+      <span>المجموع</span>
+      <span>385 ر.س</span>
+    </div>
+
+    <div class="cart-drawer-buttons">
+      <a href="/checkout" class="btn btn-primary btn-block">إتمام الطلب</a>
+      <a href="/cart" class="btn btn-outline btn-block">عرض السلة</a>
+    </div>
+  </div>
+
+</div>

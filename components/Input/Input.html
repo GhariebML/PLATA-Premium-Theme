@@ -1,0 +1,49 @@
+<!-- 
+  COMPONENT: INPUT
+  Input.html
+  This file serves as a reference template for the Input component variants.
+-->
+
+<!-- Basic Text Input -->
+<div class="form-group">
+  <label for="firstName" class="form-label">الاسم الأول</label>
+  <input type="text" id="firstName" class="form-control" placeholder="أدخلي الاسم الأول">
+</div>
+
+<!-- Email Input -->
+<div class="form-group">
+  <label for="email" class="form-label">البريد الإلكتروني</label>
+  <input type="email" id="email" class="form-control" placeholder="example@email.com" dir="ltr" style="text-align: right;">
+</div>
+
+<!-- Password Input -->
+<div class="form-group">
+  <label for="password" class="form-label">كلمة المرور</label>
+  <input type="password" id="password" class="form-control" placeholder="••••••••">
+</div>
+
+<!-- Input with Error -->
+<div class="form-group">
+  <label for="phone" class="form-label">رقم الجوال</label>
+  <input type="tel" id="phone" class="form-control is-invalid" placeholder="+966 5X XXX XXXX" dir="ltr" style="text-align: right;">
+  <div class="invalid-feedback">يرجى إدخال رقم جوال صحيح</div>
+</div>
+
+<!-- Disabled Input -->
+<div class="form-group">
+  <label for="username" class="form-label">اسم المستخدم (للقراءة فقط)</label>
+  <input type="text" id="username" class="form-control" value="sara.mohammed" disabled>
+</div>
+
+<!-- Input with Icon (Search) -->
+<div class="form-group">
+  <div class="input-with-icon">
+    <span class="input-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </span>
+    <input type="search" class="form-control" placeholder="ابحثي عن منتج، مقال...">
+  </div>
+</div>

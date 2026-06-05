@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>العناية المتكاملة | بلاتا - PLATA</title>
+  
+  <!-- CSS Reset & Tokens -->
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/utilities.css">
+  <link rel="stylesheet" href="../../assets/css/animations.css">
+  
+  <!-- Component CSS -->
+  <link rel="stylesheet" href="../../components/Header/Header.css">
+  <link rel="stylesheet" href="../../components/Footer/Footer.css">
+  <link rel="stylesheet" href="../../components/BottomNavigation/BottomNavigation.css">
+  <link rel="stylesheet" href="../../components/Button/Button.css">
+  <link rel="stylesheet" href="../../components/Input/Input.css">
+  
+  <!-- Section CSS -->
+  <link rel="stylesheet" href="../../sections/RoutineBundles/RoutineBundles.css">
+  <link rel="stylesheet" href="../../sections/QuizPromoBanner/QuizPromoBanner.css">
+  
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="routines.css">
+</head>
+<body class="routines-page">
+
+  <!-- Header -->
+  <header class="site-header d-none-md d-lg-block">
+    <div class="container">
+      <div class="header-inner">
+        <nav class="desktop-nav">
+          <a href="/" class="nav-link">الرئيسية</a>
+          <a href="/shop" class="nav-link">تسوق</a>
+          <a href="/categories" class="nav-link nav-item-dropdown">التصنيفات <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <a href="/routines" class="nav-link is-active nav-item-dropdown">العناية بالبشرة <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <a href="/about" class="nav-link">عن بلاتا</a>
+        </nav>
+        <a href="/" class="header-logo">P L A T A</a>
+        <div class="header-actions">
+          <button class="header-action-btn" aria-label="بحث"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+          <a href="/account" class="header-action-btn" aria-label="حسابي"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a>
+          <a href="/cart" class="header-action-btn" aria-label="سلة المشتريات"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="header-badge">3</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="routines-main">
+    
+    <!-- Routine Bundles -->
+    <section class="routine-bundles-section">
+      <div class="container">
+        <div class="routine-header-block fade-in">
+          <h1 class="routine-page-title">العناية المتكاملة</h1>
+          <p class="routine-page-desc">مجموعات مصممة بعناية لتلبية احتياجات بشرتك وتوفير تجربة عناية متكاملة تمنحك أفضل النتائج بتكلفة أقل.</p>
+        </div>
+
+        <div class="routine-tabs">
+          <button class="routine-tab is-active">الكل</button>
+          <button class="routine-tab">البشرة الجافة</button>
+          <button class="routine-tab">البشرة الدهنية</button>
+          <button class="routine-tab">مكافحة الشيخوخة</button>
+        </div>
+
+        <div class="routine-bundles-list">
+          
+          <article class="routine-card-horizontal">
+            <div class="routine-card-image-wrap">
+              <span class="routine-badge">توفير 15%</span>
+              <img src="../../assets/images/placeholders/routine-1.jpg" alt="روتين الإشراق" class="routine-card-image">
+            </div>
+            <div class="routine-card-content">
+              <h2 class="routine-card-title">روتين الإشراق اليومي</h2>
+              <p class="routine-card-desc">مجموعة متكاملة تمنح بشرتك نضارة فورية وتوحيداً للون مع الاستخدام المستمر.</p>
+              <h3 class="routine-includes-title">تحتوي المجموعة على:</h3>
+              <div class="routine-products-list">
+                <div class="routine-product-item">الغسول الرغوي اللطيف (150 مل)</div>
+                <div class="routine-product-item">سيروم PLATA للإشراق (30 مل)</div>
+                <div class="routine-product-item">كريم الترطيب العميق (50 مل)</div>
+              </div>
+              <div class="routine-card-footer">
+                <div class="routine-price-block">
+                  <span class="routine-price">350 ر.س</span>
+                  <span class="routine-savings">بدلاً من 410 ر.س</span>
+                </div>
+                <button class="btn btn-primary">أضف المجموعة للسلة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="routine-card-horizontal">
+            <div class="routine-card-image-wrap">
+              <span class="routine-badge">توفير 10%</span>
+              <img src="../../assets/images/placeholders/routine-2.jpg" alt="روتين الترطيب" class="routine-card-image">
+            </div>
+            <div class="routine-card-content">
+              <h2 class="routine-card-title">روتين الترطيب المكثف</h2>
+              <p class="routine-card-desc">الحل الأمثل للبشرة الجافة. مجموعة صممت لحبس الرطوبة في الجلد طوال اليوم.</p>
+              <h3 class="routine-includes-title">تحتوي المجموعة على:</h3>
+              <div class="routine-products-list">
+                <div class="routine-product-item">غسول الحليب المرطب (150 مل)</div>
+                <div class="routine-product-item">سيروم الهيالورونيك (30 مل)</div>
+                <div class="routine-product-item">كريم الترميم والترطيب (50 مل)</div>
+              </div>
+              <div class="routine-card-footer">
+                <div class="routine-price-block">
+                  <span class="routine-price">320 ر.س</span>
+                  <span class="routine-savings">بدلاً من 355 ر.س</span>
+                </div>
+                <button class="btn btn-primary">أضف المجموعة للسلة</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Promo -->
+    <section class="container">
+      <div class="quiz-promo fade-in" style="margin-top: 0;">
+        <h2 class="quiz-promo-title">لستِ متأكدة أي روتين يناسبك؟</h2>
+        <p class="quiz-promo-subtitle">أجيبي عن أسئلة بسيطة حول نوع بشرتك واحتياجاتها وسنقترح لكِ الروتين الأمثل لكِ.</p>
+        <div class="quiz-promo-features">
+          <div class="quiz-feature-item"><svg class="quiz-feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> تحليل مجاني</div>
+          <div class="quiz-feature-item"><svg class="quiz-feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> توصيات دقيقة</div>
+        </div>
+        <a href="/quiz" class="btn btn-primary btn-lg">ابدئي الاستبيان</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">P L A T A</a>
+          <p class="footer-description">نؤمن بأن الجمال الحقيقي يبدأ من العناية الصادقة بالبشرة.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Nav -->
+  <nav class="bottom-nav">
+    <a href="/" class="bottom-nav-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>الرئيسية</a>
+    <a href="/shop" class="bottom-nav-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>تسوق</a>
+    <a href="/account/wishlist" class="bottom-nav-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>المفضلة</a>
+    <a href="/account" class="bottom-nav-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>حسابي</a>
+  </nav>
+
+</body>
+</html>

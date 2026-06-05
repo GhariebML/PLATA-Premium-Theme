@@ -1,0 +1,21 @@
+/* ============================
+   PAGE: HOME
+   home.css
+   ============================ */
+
+/* 
+  The Home page primarily uses component and section CSS.
+  Any home-specific overrides or spacing adjustments go here.
+*/
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.home-main {
+  flex-grow: 1;
+}
+
+/* Add spacing between sections if needed, though sections manage their own padding */

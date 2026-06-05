@@ -1,0 +1,16 @@
+/* ============================
+   PAGE: PRODUCT
+   product.css
+   ============================ */
+
+.product-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.product-main {
+  flex-grow: 1;
+}
+
+/* Specific overrides for product page */

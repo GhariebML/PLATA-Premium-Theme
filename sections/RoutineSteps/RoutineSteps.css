@@ -1,0 +1,95 @@
+/* ============================
+   SECTION: ROUTINE STEPS
+   RoutineSteps.css
+   ============================ */
+
+.routine-steps-section {
+  padding: var(--space-12) 0;
+  background-color: var(--color-surface-alt);
+}
+
+@media (min-width: 1024px) {
+  .routine-steps-section {
+    padding: var(--space-16) 0;
+  }
+}
+
+.routine-header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.routine-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .routine-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+/* Connecting Line */
+@media (min-width: 768px) {
+  .routine-grid::before {
+    content: '';
+    position: absolute;
+    top: 32px; /* Center of the number circle */
+    left: var(--space-10);
+    right: var(--space-10);
+    height: 1px;
+    background-color: var(--color-border);
+    border-top: 1px dashed var(--color-primary);
+    z-index: 1;
+  }
+}
+
+/* Step Card */
+.routine-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.step-number {
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary-deeper);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-brand);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-4);
+  box-shadow: 0 4px 12px rgba(201, 168, 154, 0.15);
+}
+
+.step-title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.step-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  max-width: 280px;
+}
+
+.routine-cta {
+  text-align: center;
+  margin-top: var(--space-10);
+}

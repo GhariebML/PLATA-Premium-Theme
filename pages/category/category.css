@@ -1,0 +1,26 @@
+/* ============================
+   PAGE: CATEGORY
+   category.css
+   ============================ */
+
+.category-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.category-main {
+  flex-grow: 1;
+}
+
+/* Specific overrides for category page */
+.category-main .products-grid {
+  /* Ensure standard grid on category page (no mobile swipe) */
+}
+
+@media (max-width: 479px) {
+  .category-main .products-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on mobile category page */
+    gap: var(--space-2);
+  }
+}
